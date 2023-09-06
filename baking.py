@@ -6,6 +6,18 @@ ingredient_2 = 'eggs'
 ingredient_3 = 'flour'
 ingredient_4 = 'sugar'
 
+def get_input(prompt):
+    """Helper function to handle input during GitHub Actions."""
+    # Check if we're running in a GitHub Actions environment
+    if os.environ.get('GITHUB_ACTIONS'):
+        if "favorite baked good" in prompt:
+            return "cake"
+        elif "times a month" in prompt:
+            return "5"
+        else:
+            return "default_value"
+    else:
+        return input(prompt)
 
 def print_ingredients():  # Ways to work with strings/printing
     # Those are the right ingredients, aren't they? Let's print them out a few different ways to check
