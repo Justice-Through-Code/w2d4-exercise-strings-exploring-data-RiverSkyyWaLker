@@ -64,6 +64,14 @@ def favorite_bake():  # User Input/Type conversion
     # print(f'We recommend you eat {baked_good}s at least {frequency * 2} times a month!')
     print(f'We recommend you eat {baked_good}s at least {int(frequency) * 2} times a month!')
 #favorite_bake()
+import os
+
+if "TESTING_ENV" in os.environ:
+    baked_good = "Cake"
+    frequency = "5"
+else:
+    baked_good = input('What is your favorite baked good?')
+    frequency = input(f'Roughly how many times a month do you eat {baked_good}s?')
 
 print_ingredients()
 confirm_ingredients()
