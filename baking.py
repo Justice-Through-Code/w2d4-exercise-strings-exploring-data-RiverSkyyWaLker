@@ -66,6 +66,6 @@ def favorite_bake():  # User Input/Type conversion
 #favorite_bake()
 
 
-print_ingredients()
-confirm_ingredients()
-favorite_bake()
+# print_ingredients()
+# confirm_ingredients()
+# favorite_bake()
